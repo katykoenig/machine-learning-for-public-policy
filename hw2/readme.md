@@ -88,7 +88,7 @@ Below, please find the scatterplots of for the following variables: age, NumberR
 
 ![alt text](https://github.com/katykoenig/machine-learning-for-public-policy/raw/master/hw2/Plots/NumberOfTime30-59DaysPastDueNotWorsehistogram.png)
 
-As we can see above, the distributions vary significantly across variables. Additionally, while there appears to be a few outliers across columns (liek income and age), we choose to include these observations in our model.
+As we can see above, the distributions vary significantly across variables. Additionally, while there appears to be a few outliers across columns (like income and age), we choose to include these observations in our model.
 
 Next, we evaluate correlations through creating a correlation table. Because the table generated is somewhat large, it is easier to understand the correlations between the variables through a heatmap:
 
