@@ -260,6 +260,6 @@ def rep_d_tree(dec_tree, features_lst):
     '''
     dot_data = StringIO()
     export_graphviz(dec_tree, feature_names=features_lst, out_file=dot_data,
-                    filled=True, rounded=True, special_characters=True)
+                    filled=True, rounded=True, special_characters=True,)
     graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
     Image(graph.write_png('decision_tree.png'))
