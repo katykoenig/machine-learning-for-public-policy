@@ -49,7 +49,7 @@ We will explore the printed tables and saved visualizations in detail in the ana
 
 We begin by converting the csv to a pandas dataframe and generating basic summary statistics.
 
-* INSERT SUMMARY PNG
+![alt text](https://github.com/katykoenig/machine-learning-for-public-policy/raw/master/hw2/Summary_Stats.png)
 
 Then, we check for the amount of null values across columns:
 
@@ -74,15 +74,25 @@ To get an understanding of the distribution of the variables as well as to see i
 
 Here is the aggregation of the histograms of each variable:
 
+![alt text](https://github.com/katykoenig/machine-learning-for-public-policy/raw/master/hw2/histograms.png)
+
 Below, please find the scatterplots of for the following variables: age, NumberRealEstateLoansOrLines, MonthlyIncome, NumberOfTime30-59DaysPastDueNotWorse 
 
-* INSERT SCATTERPLOTS
+![alt text](https://github.com/katykoenig/machine-learning-for-public-policy/raw/master/hw2/Plots/agescatterplot.png)
+
+![alt text](https://github.com/katykoenig/machine-learning-for-public-policy/raw/master/hw2/Plots/NumberRealEstateLoansOrLinesscatterplot.png)
+
+![alt text](https://github.com/katykoenig/machine-learning-for-public-policy/raw/master/hw2/Plots/NumberRealEstateLoansOrLinesscatterplot.png)
+
+![alt text](https://github.com/katykoenig/machine-learning-for-public-policy/raw/master/hw2/Plots/MonthlyIncomescatterplot.png)
+
+![alt text](https://github.com/katykoenig/machine-learning-for-public-policy/raw/master/hw2/Plots/NumberOfTime30-59DaysPastDueNotWorsehistogram.png)
 
 As we can see above, the distributions vary significantly across variables. Additionally, while there appears to be a few outliers across columns (liek income and age), we choose to include these observations in our model.
 
 Next, we evaluate correlations through creating a correlation table. Because the table generated is somewhat large, it is easier to understand the correlations between the variables through a heatmap:
 
-* INSERT HEATMAP PNG
+![alt text](https://github.com/katykoenig/machine-learning-for-public-policy/raw/master/hw2/corr_heatmap.png)
 
 As we can see in the generated table and the heatmap above, the following variables are highly correlated: 'NumberOfTime30-59DaysPastDueNotWorse', 'NumberOfTime60-89DaysPastDueNotWorse', 'NumberOfTimes90DaysLate'.
 
@@ -98,11 +108,9 @@ In generating our list of features, we used all the variables except our target 
 
 We used the scikit-learn package to split the date between testing and training sets, with 30% of the dataset held for testing, using random_state = 57 to split the data. We then created a decision tree with our split criteron being information gain ('entropy'). We also set the maximum depth to 5 to avoid overfitting. We used scikit-learn's fit method to fit our training data to the decision tree.
 
-* ADD DECISION TREE PNG HERE
+
+![alt text](https://github.com/katykoenig/machine-learning-for-public-policy/raw/master/hw2/decision_tree.png)
 
 In the representation of our decision tree above, in the first line of each node, we can see the variable on which the node was split as well as the current entropy of each note. The "value" of each node shows how many observations in each node fall into our two categories. This also represented in the color of each node.
 
 To evaluate our model, we evaluated the accuracy of our decision tree's prediction for the testing data. Our code prints the accuracy of our model on the command line, which evaluates to 0.85. While this is high accuracy, it is worth noting that of the total 41,016 observations given, only 6,620 observations were labeled a '1' in 'SeriousDlqin2yrs', or approximately 16%. This means that had our model predicted all observations as no, or '0', for 'SeriousDlqin2yrs', our accuracy would have been 84%.
-
-
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
