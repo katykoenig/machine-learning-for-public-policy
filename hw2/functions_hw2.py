@@ -59,8 +59,7 @@ def evaluate_correlations(dataframe, output_filename):
     corr_df = dataframe.corr()
     corr_heatmap = sns.heatmap(corr_df, xticklabels=corr_df.columns, yticklabels=corr_df.columns)
     plt.title("Correlation of Variables")
-    plt.tight_layout()
-    corr_heatmap.figure.savefig(output_filename)
+    corr_heatmap.figure.savefig(output_filename, bbox_inches="tight")
     plt.clf()
     return corr_df
 

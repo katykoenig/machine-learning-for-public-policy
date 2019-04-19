@@ -39,8 +39,8 @@ s
     null_table = fn.check_null_values(dataframe)
     print(null_table)
     print()
-    fn.show_distribution(dataframe)
-    fn.create_scatterplots(dataframe)
+    #fn.show_distribution(dataframe)
+    #fn.create_scatterplots(dataframe)
     processed_df, kept_col = fn.preprocess(dataframe)
     for col in list(kept_col):
         fn.make_dummy(processed_df, col, 'Freq_Late', 20)
