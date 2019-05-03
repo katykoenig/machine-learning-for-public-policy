@@ -70,7 +70,7 @@ This program will also print the following tables:
   3. Number of Null Values per Column
 
 
-  ======
+
   # Policy Report
 
  ## Data & Preprocessing Description
