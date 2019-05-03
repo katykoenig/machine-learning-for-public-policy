@@ -138,8 +138,8 @@ In our analysis, we drop the 'datefullyfunded' column to prevent leakage and 'sc
 
  Below we also provide a heatmap of the correlations between numeric variables in the dataset as well as histograms of these columns as well:
 
-  ![alt text](INSERTTABLEHERE)
-  ![alt text](INSERTTABLEHERE)
+  ![alt text](https://raw.githubusercontent.com/katykoenig/machine-learning-for-public-policy/master/hw3/correlations_heatmap.png)
+  ![alt text](https://raw.githubusercontent.com/katykoenig/machine-learning-for-public-policy/master/hw3/histograms.png)
 
  ## Feature Selection & Model Selection
 
@@ -177,8 +177,8 @@ decision tree| {'criterion': 'gini', 'max_depth': 5, 'min_sam...| 2012-01-01 | 2
 
 We include charts of the precision-recall and ROC curves for the above mentioned models in "Precision-Recall_and_ROC_Curves" folder in this Github repository. We also include the precision-recall curve for the logistic regression model as well as the ROC curve the gradient boost model below.
 
- ![alt text](INSERTTABLEHERE)
- ![alt text](INSERTTABLEHERE)
+ ![alt text](https://raw.githubusercontent.com/katykoenig/machine-learning-for-public-policy/master/hw3/Precision-Recall_and_ROC_Curves/Precision-Recall%20logistic_regression%20with%20%7B'C'%3A%2010%2C%20'penalty'%3A%20'l2'%2C%20'solver'%3A%20'lbfgs'%7D.png)
+ ![alt text](https://raw.githubusercontent.com/katykoenig/machine-learning-for-public-policy/master/hw3/Precision-Recall_and_ROC_Curves/ROC%20gradient_boost%20with%20%7B'max_depth'%3A%2010%2C%20'n_estimators'%3A%20100%7D.png)
 
 In the shorter training term, with training data from January 2012 to June 2012 and testing data being from July 2012 through December 2012, our logistic regression model performed the best in all metrics with one of our decision tree variants tying for a perfect recall score of 1.0.
 
