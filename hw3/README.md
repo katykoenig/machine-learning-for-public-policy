@@ -167,7 +167,7 @@ While the large amount of features allowed for some models to obtain high scores
 Because we seek to intervene with 5% of the projects at highest risk of not getting fully funded by the deadline of 60 days after posting, we looked specifically at models performing the best at each metric (accuracy, precision, recall, AUC-ROC score, F1 score).
 
 Model | Params | Start Train | End Train | Start Test | End Test | Accuracy | Precision | Recall | F1 | AUC-ROC
---- | --- | --- | --- | --- | ---| --- | --- | --- | ---
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
 logistic regression | {'C': 10, 'penalty': 'l2', 'solver': 'lbfgs'} |2012-01-01 | 2012-06-30 | 2012-07-01 | 2013-12-31 | 0.830886 | 0.814608 | 1 | 0.897833 | 0.670879
 decision tree | {'criterion': 'entropy', 'max_depth': 5, 'min_... | 2012-01-01 | 2012-06-30 | 2012-07-01 | 2012-12-31 | 0.743598 | 0.743466 | 1 | 0.85286 | 0.501004
 AdaBoost | {'algorithm': 'SAMME.R', 'n_estimators': 10} | 2012-01-01 | 2012-12-31 | 2013-01-01 | 2013-07-01 | 0.929009 | 0.906233 | 0.999663 | 0.950658 | 0.887829
