@@ -70,7 +70,6 @@ This program will also print the following tables:
   3. Number of Null Values per Column
 
 
-  ======
   # Policy Report
 
  ## Data & Preprocessing Description
@@ -138,8 +137,8 @@ In our analysis, we drop the 'datefullyfunded' column to prevent leakage and 'sc
 
  Below we also provide a heatmap of the correlations between numeric variables in the dataset as well as histograms of these columns as well:
 
-  ![alt text](INSERTTABLEHERE)
-  ![alt text](INSERTTABLEHERE)
+  ![alt text](https://raw.githubusercontent.com/katykoenig/machine-learning-for-public-policy/master/hw5/correlations.png)
+  ![alt text](https://raw.githubusercontent.com/katykoenig/machine-learning-for-public-policy/master/hw5/histograms.png)
 
  ## Feature Selection & Model Selection
 
@@ -175,8 +174,8 @@ decision tree | 'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 2| 20
 
 We include charts of the precision-recall and AUC-ROC curves for the above mentioned models in "Precision-Recall-Curves" and "AUC-ROC-Plots" folders, respectively in this Github repository. We also include the precision-recall curve for our decision tree (with max depth 10) as well as the AUC-ROC curve for our logistic regression model below.
 
- ![alt text](INSERTTABLEHERE)
- ![alt text](INSERTTABLEHERE)
+ ![alt text](https://raw.githubusercontent.com/katykoenig/machine-learning-for-public-policy/master/hw5/Precision-Recall-Curves/Precision-Recall%20decision_tree%20with%20%7B'criterion'%3A%20'gini'%2C%20'max_depth'%3A%2010%2C%20'min_samples_split'%3A%202%7D.png)
+ ![alt text](https://raw.githubusercontent.com/katykoenig/machine-learning-for-public-policy/master/hw5/AUC-ROC-Plots/ROC%20logistic_regression%20with%20%7B'C'%3A%200.01%2C%20'penalty'%3A%20'l2'%2C%20'solver'%3A%20'lbfgs'%7D.png)
 
 In the shorter training term, with training data from January 2012 to April 2012 (evaluation from May 2012 to June 2012) and testing data being from July 2012 through October 2012 (evaluation from November 2012 December 2012), our logistic regression model performed the best in all metrics
 
