@@ -167,7 +167,7 @@ Because we seek to intervene with 5% of the projects at highest risk of not gett
 
 Model | Params | Start Train | End Train | Start Test | End Test | Accuracy | Precision | Recall | F1 | AUC-ROC
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
-logistic regression | 'C': 0.01, 'penalty': 'l2', 'solver': 'lbfgs' |2012-01-01 | 2012-06-30 | 2012-07-01 | 2013-12-31 | 0.830886 | 1 | 0.200759 | 0.334387 | 0.600379
+logistic regression | 'C': 0.01, 'penalty': 'l2', 'solver': 'lbfgs' | 2012-01-01 | 2012-06-30 | 2012-07-01 | 2013-12-31 | 0.830886 | 1 | 0.200759 | 0.334387 | 0.600379
 decision tree | 'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 2 | 2012-01-01 | 2012-06-30 | 2012-07-01 | 2012-12-31 |  0.751548 | 1 | 0.167373 | 0.286752 | 0.583687
 decision tree | 'criterion': 'gini', 'max_depth': 5, 'min_samples_split': 2 | 2012-01-01 | 2012-12-31 | 2013-01-01 | 2013-07-01 | 0.783005 | 1 | 0.187255 | 0.315442 | 0.593628
 
