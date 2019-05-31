@@ -19,10 +19,8 @@ This file contains the following python files:
 * matplotlib 3.0.3
 * plotnine 0.5.1
 * seaborn 0.9.0
-* sklearn 0.20.3
-* typed-ast 1.3.5
-* dateutil 2.4.1
-* csvkit 1.0.4
+* sklearn 0.21.2
+* dateutil 2.8.0
 
 
 Running the following from the command line will print descriptive statistics, create and print the following:
