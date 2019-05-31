@@ -167,9 +167,9 @@ Because we seek to intervene with 5% of the projects at highest risk of not gett
 
 Model | Params | Start Train | End Train | Start Test | End Test | Accuracy | Precision | Recall | F1 | AUC-ROC
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
-logistic regression | 'C': 0.01, 'penalty': 'l2', 'solver': 'lbfgs' |2012-01-01 | 2012-06-30 | 2012-07-01 | 2013-12-31 | 0.830886 | 0.814608 | 1 | 0.897833 | 0.670879
-decision tree |'criterion': 'gini', 'max_depth': 5, 'min_samples_split': 2| 2012-01-01 | 2012-06-30 | 2012-07-01 | 2012-12-31 | 0.743598 | 0.743466 | 1 | 0.85286 | 0.501004
-decision tree | 'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 2| 2012-01-01 | 2012-12-31 | 2013-01-01 | 2013-07-01 | 0.762243 | 0.742092 | 1 | 0.851955 | 0.623669
+logistic regression | 'C': 0.01, 'penalty': 'l2', 'solver': 'lbfgs' |2012-01-01 | 2012-06-30 | 2012-07-01 | 2013-12-31 | 0.830886 | 1 | 0.200759 | 0.334387 | 0.600379
+decision tree | 'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 2 | 2012-01-01 | 2012-06-30 | 2012-07-01 | 2012-12-31 |  0.751548 | 1 | 0.167373 | 0.286752 | 0.583687
+decision tree | 'criterion': 'gini', 'max_depth': 5, 'min_samples_split': 2 | 2012-01-01 | 2012-12-31 | 2013-01-01 | 2013-07-01 | 0.783005 | 1 | 0.187255 | 0.315442 | 0.593628
 
 
 We include charts of the precision-recall and AUC-ROC curves for the above mentioned models in "Precision-Recall-Curves" and "AUC-ROC-Plots" folders, respectively in this Github repository. We also include the precision-recall curve for our decision tree (with max depth 10) as well as the AUC-ROC curve for our logistic regression model below.
@@ -177,14 +177,11 @@ We include charts of the precision-recall and AUC-ROC curves for the above menti
  ![alt text](https://raw.githubusercontent.com/katykoenig/machine-learning-for-public-policy/master/hw5/Precision-Recall-Curves/Precision-Recall%20decision_tree%20with%20%7B'criterion'%3A%20'gini'%2C%20'max_depth'%3A%2010%2C%20'min_samples_split'%3A%202%7D.png)
  ![alt text](https://raw.githubusercontent.com/katykoenig/machine-learning-for-public-policy/master/hw5/AUC-ROC-Plots/ROC%20logistic_regression%20with%20%7B'C'%3A%200.01%2C%20'penalty'%3A%20'l2'%2C%20'solver'%3A%20'lbfgs'%7D.png)
 
-In the shorter training term, with training data from January 2012 to April 2012 (evaluation from May 2012 to June 2012) and testing data being from July 2012 through October 2012 (evaluation from November 2012 December 2012), our logistic regression model performed the best in all metrics
+In the shorter training term, with training data from January 2012 to April 2012 (evaluation from May 2012 to June 2012) and testing data being from July 2012 through October 2012 (evaluation from November 2012 December 2012), our logistic regression model performed the best in all metrics.
 
-In the second timeframe with training data from January 2012 through October 2012 (evaluation from November 2012 to December 2012) and testing data from January 2013 through April 2013 (evaluation from May 2013 to June 2013), our ADA boosting model had the highest accuracy, precision, recall, AUC-ROC and F1 scores.
+In the second timeframe with training data from January 2012 through October 2012 (evaluation from November 2012 to December 2012) and testing data from January 2013 through April 2013 (evaluation from May 2013 to June 2013), our decision tree model with depth of 10 had the highest accuracy, precision, recall, AUC-ROC and F1 scores.
 
-When we look at larger training sets with training data from January 2012 to April 2013 (evaluation May 2013 to June 2013) to predict testing data from July 2013 through October 2013 (evaluation November 2013 to December 2013), the 
-
-
-gradient boosting model performed the best in the following metrics: accuracy, precision, recall, AUC-ROC score, F1 score while again one variant of our decision tree model produced the highest recall.
+When we look at larger training sets with training data from January 2012 to April 2013 (evaluation May 2013 to June 2013) to predict testing data from July 2013 through October 2013 (evaluation November 2013 to December 2013), our decision tree model with depth of five performed the best on all evaluation metrics.
 
 The persistently high precision score reflects very few false positives. This is most likely due to the lack of positive labels the models gave. The overall low recall scores reflect the high number of false negatives labeled by the models. This is to be expected as we are evaluating the models at a low threshold of 5 percent. 
 
@@ -192,10 +189,9 @@ Our decision tree outperformed not only random forests but other ensemble models
 
 The shift from the initial success for the logistic regression model in the smallest training timeframe to worsening performance in longer training timeframes suggests that in the long term, our data is not linear. This could explain why our support machine vector model was not successful in its predictions under any evaluation metric. 
 
-It is interesting to note that while decision trees performed the best in both the second and third testing tests, the model parameters changed. 
+It is interesting to note that while decision trees performed the best in both the second and third testing tests sets, the model parameters differed. While the min sample size remained the same, for our largest data set, the decision tree performed better when it's maxium depth decreased from ten to five, suggesting that overfitting for our test data is not beneficial for better performance.
 
-Of the models tested with these three specified time periods, we ultimately would recommend the decision tree model
-that performed that best in the longest and last time period. The variation in time of the models deemed most successful based on our evaluation metrics does suggest that there may underlying trends in the data that can only be captured through training the dataset on the longest period possible. Similarly, if the intervention was to take place in 2019, it is worth noting that the delay from available data to data of policy implementation may result in unsuccessful interventions when our gradient model is deployed. 
+Of the models tested with these three specified time periods, we ultimately would recommend the decision tree model with max depth of five splits, which performed the best in the longest and last time period. The variation in time of the models deemed most successful based on our evaluation metrics does suggest that there may underlying trends in the data that can only be captured through training the dataset on the longest period possible. Similarly, if the intervention was to take place in 2019, it is worth noting that the delay from available data to data of policy implementation may result in unsuccessful interventions when our model is deployed. 
 
 If the recommendation we are making is for a short-term immediate intervention program, it may be worth running the models on a more short-term training set of the most recent data. For example, if the intervention program was to be implemented only from July 2019 through December 2019, it may be fruitful to run our models on data from July 2018 to December 2018 instead of all available data, which is more likely to capture long term trends as opposed to seasonal trends in data. 
 
