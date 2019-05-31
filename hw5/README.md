@@ -33,7 +33,7 @@ Running the following from the command line will print descriptive statistics, c
    2. Histaograms of the distributitions of columns
 
 ```
-$ python go_hw5.py 'projects_2012_2013.csv' output_csvname 'Describe'
+$ python go_hw5.py 'projects_2012_2013.csv' 'results.csv' 'Describe'
 ```
 By default this command will run the following classifiers:
   * Decision tree
@@ -45,7 +45,7 @@ By default this command will run the following classifiers:
 
 If you would like to also include gradient boosting and support vector machine classifiers, from the command line, run:
 ```
-$ python go_hw5.py 'projects_2012_2013.csv' 'outputfile.csv' 'Describe' 'all'
+$ python go_hw5.py 'projects_2012_2013.csv' 'results.csv' 'Describe' 'all'
 ```
 
 This program create and save the following data visualizations in the directory in which the command was run:
