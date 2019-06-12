@@ -4,9 +4,9 @@
 ## Getting Started
 
 This file contains the following files:
-	1. hw4pipeline.py
+1. hw4pipeline.py
 	* Python file that contains all functions for reading, cleaning and processing data
-	2. HW4.ipynb
+2. HW4.ipynb
 	* Example usage of the functions in hw4pipeline.py
 
 ### Necessary Modules:
